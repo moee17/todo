@@ -31,3 +31,5 @@ taskInput.addEventListener("click", () => {
 function remove(e) {
 	e.parentNode.remove();
 }
+
+//=============update 15/7============
