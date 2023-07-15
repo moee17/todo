@@ -23,7 +23,7 @@ taskInput.addEventListener("click", () => {
 	for (let i = 0; i < taskArea.length; i++) {
 		let taskDecor = document.querySelectorAll(".task-decor");
 		taskArea[i].addEventListener("click", () => {
-			taskDecor[i].classList.add("done");
+			taskDecor[i].classList.toggle("done");
 		});
 	}
 });
