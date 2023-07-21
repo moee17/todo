@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="login.css" />
+
+		<title>YourLists</title>
+	</head>
+	<body>
+		<div class="main_container">
+			<div class="left_section">
+				<h1>yourlists</h1>
+				<h2>recent login</h2>
+				<p>click your avatar or add an account</p>
+				<div class="account_section">
+					<!-- <div class="account_box" style="display: none">
+                            <img src="" alt="" />
+                            <p>name</p>
+                        </div> -->
+					<div class="add_acc_box">
+						<div class="add_icon"><i class="fa-solid fa-plus"></i></div>
+						<div style="padding: 12px"><span>Add account</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="right_section">
+				<div class="account_signin">
+					<form action="" method="post" class="signin">
+						<div class="account_info">
+							<input
+								class="signInInfo"
+								placeholder="email or phone number"
+								type="text"
+							/>
+							<input
+								class="signInPass"
+								placeholder="password"
+								type="password"
+							/>
+						</div>
+						<div style="display: none" class="wrongInfo">
+							<p>sai mật khẩu hoặc tài khoản</p>
+						</div>
+						<button type="button" class="loginBtn">log in</button>
+						<a href="#" class="resPass">forgotten password?</a>
+						<hr />
+						<button type="button" class="signupBtn">create new account</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="signUpModal" class="myModal">
+			<div class="modalContainer">
+				<div class="closeBox">
+					<i id="closeModal" class="fa-solid fa-x"></i>
+				</div>
+				<div class="signUpBox">
+					<div class="signUpText">
+						<h1>sign up</h1>
+						<p>It's quick and easy</p>
+					</div>
+					<!-- <hr /> -->
+					<form action="">
+						<div class="signUpInfo clearfix">
+							<input
+								class="signUpFirstname"
+								placeholder="first name"
+								type="text"
+							/>
+							<input
+								class="signUpSurrname"
+								placeholder="Surrname"
+								type="text"
+							/>
+						</div>
+						<div class="signUpId">
+							<input
+								class="signUpContact"
+								placeholder="Phone number or email"
+								type="text"
+							/>
+						</div>
+						<div class="signUpPassword">
+							<input
+								class="signUpPass"
+								placeholder="Password"
+								type="password"
+								name=""
+								id=""
+							/>
+						</div>
+					</form>
+					<div
+						class="createAccBtn"
+						style="text-align: center; margin-bottom: 20px"
+					>
+						<button type="button">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="addAccModal" class="myModal">
+			<div class="addContainer">
+				<div class="closeBox">
+					<i id="closeModal" class="fa-solid fa-x"></i>
+				</div>
+				<div class="addBox">
+					<div class="addText">
+						<h1>log in to YourLists</h1>
+					</div>
+					<form action="">
+						<input
+							class="addInfo"
+							placeholder="email adress or phone number"
+							type="text"
+						/>
+						<div class="passInput">
+							<input class="addPass" placeholder="password" type="password" />
+							<div class="passIcon">
+								<i class="fa-regular fa-eye-slash"></i>
+							</div>
+
+							<button type="button" class="addBtn">log in</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="login.js"></script>
+	<script
+		src="https://kit.fontawesome.com/c5344fbffe.js"
+		crossorigin="anonymous"
+	></script>
+</html>

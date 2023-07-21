@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: visible;
+}
+
+/* .clearfix::before {
+	content: "";
+	clear: both;
+	display: table;
+} */
+
+.main_container {
+	padding-top: 100px;
+	overflow: auto;
+}
+.left_section {
+	padding-left: 200px;
+	width: 60%;
+	float: left;
+}
+
+.right_section {
+	width: 40%;
+	float: right;
+	padding-top: 50px;
+	text-align: center;
+	padding-right: 200px;
+}
+
+.left_section h1 {
+	color: rgb(100, 154, 154);
+
+	margin: 15px 0;
+	font-size: 36px;
+}
+
+.left_section h2 {
+	font-size: 36px;
+	font-weight: 500;
+}
+
+.left_section p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.add_acc_box {
+	display: block;
+	width: fit-content;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 0 0 0 1.75px #dddfe2;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+.add_acc_box:hover {
+	box-shadow: 0 1px 8px 5px #dddfe2;
+}
+
+.add_acc_box span {
+	font-size: 18px;
+	color: rgb(100, 154, 154);
+}
+
+.add_acc_box .add_icon {
+	font-size: 30px;
+	color: rgb(100, 154, 154);
+	width: 160px;
+	height: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account_signin {
+	width: auto;
+	border-radius: 8px;
+	box-shadow: 0 0 0 1.75px #dddfe2;
+}
+
+.signin {
+	padding-top: 10px;
+}
+.account_info input {
+	width: 315px;
+	margin: 5px 0;
+	padding: 15px;
+	border: 1px solid #dddfe2;
+	border-radius: 8px;
+}
+
+.addBox .addBtn,
+.account_signin .loginBtn {
+	width: 315px;
+	padding: 10px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 10px;
+	border-radius: 8px;
+	border: none;
+	background-color: rgb(100, 154, 154);
+	color: white;
+}
+
+.resPass {
+	display: block;
+	text-decoration: none;
+	font-size: 16px;
+	margin-top: 15px;
+	color: rgb(100, 154, 154);
+}
+
+hr {
+	border: 0.5px;
+	margin: 20px 16px;
+}
+
+.signupBtn {
+	padding: 10px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	border: none;
+	background-color: rgb(100, 154, 154);
+	color: white;
+}
+
+.createAccBtn button:hover,
+.loginBtn:hover,
+.signupBtn:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+/* =====================pop-up modal====================== */
+
+.myModal {
+	overflow: auto;
+	display: none;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 50px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.addContainer {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 440px;
+	height: auto;
+	border: 1px solid #dddfe2;
+	background-color: white;
+	border-radius: 8px;
+}
+.modalContainer {
+	text-align: left;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 440px;
+	height: auto;
+	border: 1px solid #dddfe2;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.closeBox {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(232, 229, 229);
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.closeBox:hover {
+	cursor: pointer;
+	background-color: rgb(223, 219, 219);
+}
+
+.addText,
+.signUpText {
+	padding: 16px;
+}
+
+.signUpBox form {
+	padding: 16px;
+	overflow: auto;
+}
+
+.signUpInfo input {
+	padding: 12px;
+	margin-top: 1px;
+	border-radius: 4px;
+	border: 0.5px groove rgb(204, 199, 199);
+}
+
+.addBox input,
+.signUpPassword input,
+.signUpId input {
+	width: 395px;
+	margin-top: 10px;
+	padding: 12px;
+	border-radius: 4px;
+	border: 0.5px groove rgb(204, 199, 199);
+}
+
+.createAccBtn button {
+	width: 315px;
+	padding: 10px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 10px;
+	border-radius: 8px;
+	border: none;
+	background-color: rgb(100, 154, 154);
+	color: white;
+}
+
+.passIcon {
+	position: relative;
+}
+
+.passIcon:hover {
+	cursor: pointer;
+}
+
+.passIcon i {
+	position: absolute;
+	right: 30px;
+	top: -28px;
+}
+
+.addBtn {
+	margin: 20px;
+}
+
+.account_info {
+	position: relative;
+}
+.account_info .passIcon i {
+	position: absolute;
+	top: -35px;
+}

@@ -33,3 +33,4 @@ function remove(e) {
 }
 
 //=============update 15/7============
+console.log(window.location.pathname);
