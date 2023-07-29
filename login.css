@@ -140,6 +140,25 @@ hr {
 	cursor: pointer;
 }
 
+.account_section {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.account_box {
+	display: block;
+	width: 160px;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 0 0 0 1.75px #dddfe2;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+.account_box img {
+	width: 160px;
+}
+
 /* =====================pop-up modal====================== */
 
 .myModal {

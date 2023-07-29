@@ -83,48 +83,71 @@ createAccBtn.addEventListener("click", signUpUser);
 
 //================================sign in section======================
 
-let signInBtn = document.querySelector(".loginBtn");
-let signInInfo = document.querySelector(".signInInfo");
-let signInPass = document.querySelector(".signInPass");
-let wrongInfo = document.querySelector(".wrongInfo");
+const signInBtn = document.querySelector(".loginBtn");
+const signInInfo = document.querySelector(".signInInfo");
+const signInPass = document.querySelector(".password");
+const wrongInfo = document.querySelector(".wrongInfo");
 
-let logInId = JSON.parse(localStorage.getItem("user"));
+let user = localStorage.getItem("user");
+let data = JSON.parse(user);
 
-// đăng nhập được nhưng chưa tối ưu
-// signInBtn.addEventListener("click", () => {
-// 	for (let i = 0; i < logInId.length; i++) {
-// 		if (
-// 			logInId[i].contact == signInInfo.value &&
-// 			logInId[i].password == signInPass.value
-// 		) {
-// 			location.pathname = "index.html";
-// 			console.log("true");
-// 		} else {
-// 			// alert("sai tài khoản hoặc mật khẩu");
-// 			wrongInfo.style.display = "block";
-// 		}
-// 	}
-// });
-signInBtn.addEventListener("click", (e) => {
-	if (signInInfo.value == "" || signInPass == "") {
-		alert("nhap thông tin vào");
+// ===============================đã hoàn thành
+
+signInBtn.addEventListener("click", function (e) {
+	if (signInInfo.value == "" || signInPass.value == "") {
 		e.preventDefault;
 	} else {
-		logIn();
-	}
-});
-
-function logIn() {
-	let id = "";
-	let pass = "";
-	for (let i in logInId) {
-		pass = logInId[i].password;
-		id = logInId[i].contact;
-		if (signInInfo.value == id && signInPass.value == pass) {
+		let a = data.find((id) => {
+			return signInInfo.value == id.contact && signInPass.value == id.password;
+		});
+		if (a) {
 			location.pathname = "index.html";
-			break;
+			return;
 		} else {
 			wrongInfo.style.display = "block";
 		}
 	}
-}
+});
+// ============================== cũng được nhưng vẫn chưa tối ưu
+// signInBtn.addEventListener("click", (e) => {
+// 	if (signInInfo.value == "" || signInPass.value == "") {
+// 		alert("nhap thông tin vào");
+// 		e.preventDefault;
+// 	} else {
+// 		logIn();
+// 	}
+// });
+
+// function logIn() {
+// 	let id = "";
+// 	let pass = "";
+// 	for (let i in data) {
+// 		pass = data[i].password;
+// 		id = data[i].contact;
+// 		if (signInInfo.value == id && signInPass.value == pass) {
+// 			location.pathname = "index.html";
+// 			break;
+// 		} else {
+// 			wrongInfo.style.display = "block";
+// 		}
+// 	}
+// }
+
+//==============asdasdfa
+// for (let i = 0; i < data.length; i++) {
+// 	if (
+// 		!(
+// 			data[i].contact == signInInfo.value &&
+// 			data[i].password == signInPass.value
+// 		)
+// 	) {
+// 		// debugger;
+// 		wrongInfo.style.display = "block";
+// 		return;
+// 	} else {
+// 		// alert("sai tài khoản hoặc mật khẩu");
+// 		location.pathname = "index.html";
+// 	}
+// }
+
+//===========================add account========================

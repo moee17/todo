@@ -14,10 +14,6 @@
 				<h2>recent login</h2>
 				<p>click your avatar or add an account</p>
 				<div class="account_section">
-					<!-- <div class="account_box" style="display: none">
-                            <img src="" alt="" />
-                            <p>name</p>
-                        </div> -->
 					<div class="add_acc_box">
 						<div class="add_icon"><i class="fa-solid fa-plus"></i></div>
 						<div style="padding: 12px"><span>Add account</span></div>
@@ -29,15 +25,23 @@
 					<form action="" method="post" class="signin">
 						<div class="account_info">
 							<input
+								required
 								class="signInInfo"
 								placeholder="email or phone number"
 								type="text"
 							/>
 							<input
-								class="signInPass"
+								required
+								class="password"
 								placeholder="password"
 								type="password"
 							/>
+							<!-- <div class="passIcon">
+								<i onclick="showPass()" class="fa-regular fa-eye-slash"></i>
+							</div> -->
+						</div>
+						<div style="display: none" class="requiredInfo">
+							<p>hãy nhập tài khoản và mật khẩu</p>
 						</div>
 						<div style="display: none" class="wrongInfo">
 							<p>sai mật khẩu hoặc tài khoản</p>
@@ -116,20 +120,16 @@
 							placeholder="email adress or phone number"
 							type="text"
 						/>
-						<div class="passInput">
-							<input class="addPass" placeholder="password" type="password" />
-							<div class="passIcon">
-								<i class="fa-regular fa-eye-slash"></i>
-							</div>
+						<input id="addPass" placeholder="password" type="password" />
 
-							<button type="button" class="addBtn">log in</button>
-						</div>
+						<button type="button" class="addBtn">log in</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script src="login.js"></script>
+	<script src="add.js"></script>
 	<script
 		src="https://kit.fontawesome.com/c5344fbffe.js"
 		crossorigin="anonymous"
